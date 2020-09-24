@@ -31,7 +31,7 @@ function i2ffl(du, u, p, t)   # I2-FFL
     A, B, C = abs.(u)
     du[1] = 1/(1+eta_A*n_A^2*(A/K_A)^(n_A-1)/((1+(A/K_A)^n_A)^2)) * (a_A-A)
     du[2] = 1/(1+eta_B*n_B^2*(B/K_B)^(n_B-1)/((1+(B/K_B)^n_B)^2)) * (b_B+(a_B-b_B)*(K_A^n_A)/(A^n_A+K_A^n_A)-B)
-    du[3] = 1/(1+eta_C*n_C^2*(C/K_C)^(n_C-1)/((1+(C/K_C)^n_C)^2)) * (b_C+(a_C-b_C)*(K_AC^n_A)/(A^n_A+K_AC^n_A)*(K_B^n_B)/(B^n_B+K_B^n_B)-C)
+    du[3] = 1/(1+eta_C*n_C^2*(C/K_C)^(n_C-1)/((1+(C/K_C)^n_C)^2)) * (b_C+(a_C-b_C)*(K_A^n_A)/(A^n_A+K_A^n_A)*(K_B^n_B)/(B^n_B+K_B^n_B)-C)
 end
 
 function i3ffl(du, u, p, t)   # I3-FFL
